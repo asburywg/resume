@@ -1,0 +1,137 @@
+\documentclass[a4paper]{article}
+    \usepackage{fullpage}
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+    \usepackage{textcomp}
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1]{fontenc}
+    \textheight=10in
+    \pagestyle{empty}
+    \raggedright
+    \usepackage[left=0.8in,right=0.8in,bottom=0.8in,top=0.8in]{geometry}
+
+    %\renewcommand{\encodingdefault}{cg}
+%\renewcommand{\rmdefault}{lgrcmr}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+% DEFINITIONS FOR RESUME %%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\area} [2] {
+    \vspace*{-9pt}
+    \begin{verse}
+        \textbf{#1}   #2
+    \end{verse}
+}
+
+\newcommand{\lineunder} {
+    \vspace*{-8pt} \\
+    \hspace*{-18pt} \hrulefill \\
+}
+
+\newcommand{\header} [1] {
+    {\hspace*{-18pt}\vspace*{6pt} \textsc{#1}}
+    \vspace*{-6pt} \lineunder
+}
+
+\newcommand{\employer} [3] {
+    { \textbf{#1} (#2)\\ \underline{\textbf{\emph{#3}}}\\  }
+}
+
+\newcommand{\contact} [3] {
+    \vspace*{-10pt}
+    \begin{center}
+        {\Huge \scshape {#1}}\\
+        #2 \\ #3
+    \end{center}
+    \vspace*{-8pt}
+}
+
+\newenvironment{achievements}{
+    \begin{list}
+        {$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}
+    \end{list}
+}
+
+\newcommand{\schoolwithcourses} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+    \vspace*{5pt}
+}
+
+\newcommand{\school} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+}
+% END RESUME DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%
+
+    \begin{document}
+\vspace*{-40pt}
+
+    
+
+%==== Profile ====%
+\vspace*{-10pt}
+\begin{center}
+	{\Huge \scshape {Will Asbury}}\\
+	Tampa, FL $\cdot$ asburywg@gmail.com $\cdot$ (937) 581-5325\\
+\end{center}
+
+%==== Education ====%
+\header{Education}
+\textbf{Miami University}\hfill Oxford, OH\\
+BS Software Engineering \hfill 2014 - 2018\\
+\vspace{2mm}
+
+%==== Experience ====%
+\header{Experience}
+\vspace{1mm}
+
+\textbf{Nielsen - Platform SRE}\\
+\textit{Sr. Software Engineer} \hfill August 2020 - March 2022\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Core member of SRE team
+	\item Right of Erasure: core developer to fulfill obfuscation requests on PII data
+	\item Cost distribution solutioning
+	\item Monitoring stack with Prometheus/Grafana
+	\item Maintain shared Kubernetes compute environments
+\end{itemize}
+\textbf{Nielsen - Digital Architecture}\\
+\textit{Emerging Technologist Program} \hfill August 2019 - July 2020\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Brand Safety POC
+	\item Contributed to EKS automation
+	\item Bifrost Operator
+	\item Seamless deployment from Gitlab CI to shared Kubernetes clusters
+	\item Deployment of shared tools and services
+	\item Formation of Platform SRE team
+\end{itemize}
+\textbf{Nielsen - NetSight}\\
+\textit{Emerging Technologist Program} \hfill August 2018 - July 2019\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Spark / Scala
+\end{itemize}
+
+\header{Skills}
+\begin{tabular}{ l l }
+	Devops:                & Kubernetes, Gitlab CI, Terraform, AWS \\
+	Programming Languages: & Python                                \\
+	Big Data:              & Airflow, Spark                        \\
+\end{tabular}
+\vspace{2mm}
+
+
+
+\header{Certifactions}
+\textbf{Certified Kubernetes Administrator (CKA)} \hfill CNCF\\
+\hfill April 2022\\
+\vspace*{2mm}
+\textbf{Functional Programming Principles in Scala} \hfill EPFL\\
+\hfill May 2022\\
+\vspace*{2mm}
+
+\ 
+\end{document}
